@@ -16,19 +16,21 @@
 
 package org.pocketworkstation.pckeyboard;
 
+import android.inputmethodservice.InputMethodService;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.inputmethod.EditorInfo;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 interface ComposeSequencing {
-    void onText(CharSequence text);
-    void updateShiftKeyState(EditorInfo attr);
-    EditorInfo getCurrentInputEditorInfo();
+    public void onText(CharSequence text);
+    public void updateShiftKeyState(EditorInfo attr);
+    public EditorInfo getCurrentInputEditorInfo();
 }
 
 public class ComposeSequence {

@@ -16,9 +16,10 @@
 
 package org.pocketworkstation.pckeyboard;
 
-import android.os.Build;
-
 import java.text.Normalizer;
+
+import android.os.Build;
+import android.util.Log;
 
 public class DeadAccentSequence extends ComposeSequence {
     private static final String TAG = "HK/DeadAccent";
