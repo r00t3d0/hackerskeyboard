@@ -31,7 +31,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run:  ./gradlew packageDebugUniversalApk
+      run: gradle wrapper && ./gradlew packageDebugUniversalApk
     - name: Get app version
       run: echo "APP_VERSION=v$(cat ./app/build.gradle | grep -m1 versionName | awk -F \" '{print $2}')" >> $GITHUB_ENV
     - name: Get app name
