@@ -28,19 +28,10 @@ jobs:
       with:
         java-version: 1.8
         
-    - name: Setup Android NDK
-      uses: nttld/setup-ndk@v1.0.5
-      id: setup-ndk
-      with:
-          ndk-version: r21e
-          add-to-path: false
-      env:
-        ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
-
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: gradle wrapper && ./gradlew packageDebugUniversalApk
+      run:  ./gradlew packageDebugUniversalApk
     - name: Get app version
       run: echo "APP_VERSION=v$(cat ./app/build.gradle | grep -m1 versionName | awk -F \" '{print $2}')" >> $GITHUB_ENV
     - name: Get app name
