@@ -1,20 +1,4 @@
-Anyone facing issues to build this fork in Android Studio just add `ndk.dir` in your `local.properties` file.
-
-# Example: #
-
-## Windows: ##
-```
-sdk.dir=C\:\\Users\\USER_NAME\\AppData\\Local\\Android\\Sdk
-ndk.dir=C\:\\Users\\USER_NAME\\AppData\\Local\\Android\\Sdk\\ndk\\NDK_VERSION
-```
-
-## Linux: ##
-```
-sdk.dir = /home/USERNAME/Android/Sdk
-ndk.dir = /home/USERNAME/Android/Sdk/ndk/NDK_VERSION
-```
-
-
+[![Build](https://github.com/r00t3d0/hackerskeyboard/actions/workflows/main.yml/badge.svg)](https://github.com/r00t3d0/hackerskeyboard/actions/workflows/main.yml)
 
 ## Overview ##
 
